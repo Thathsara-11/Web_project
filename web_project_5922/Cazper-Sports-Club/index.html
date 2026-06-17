@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cazper Sports Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--secondary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loaded {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader"></div>
+    </div>
+    <!-- Hero Section with Background Image -->
+    <header class="hero">
+        <nav>
+            <div class="logo">
+                <img src="logo.webp" alt="Cazper Sports Club Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="club.html">The Club</a></li>
+                <li><a href="coaching.html">Coaching</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="join.html" class="btn-primary">Join Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+         <div  class="hero-content">
+            <h1>Welcome to Cazper Sports Club</h1>
+            <p>Where Excellence Meets Performance</p>
+            <br><a href="#facilities" class="btn-primary">Explore Our Facilities</a>
+        </div> 
+    </header>
+
+    <!-- Facilities Section -->
+    <section class="registration-form" id="registration">
+        <div class="form-container">
+            <h2>Complete Your Registration</h2>
+            <div id="formResponse" class="form-response"></div>
+            <form id="joinForm" data-aos="fade-up">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name*</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name*</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth*</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectedPlan">Selected Plan*</label>
+                        <input type="text" id="selectedPlan" name="selectedPlan" readonly>
+                    </div>
+                </div>
+    
+                <div class="form-group full-width">
+                    <label for="address">Address*</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+    
+                <div class="form-group full-width">
+                    <label for="healthInfo">Health Information (Optional)</label>
+                    <textarea id="healthInfo" name="healthInfo" placeholder="Please mention any health conditions or injuries we should be aware of"></textarea>
+                </div>
+    
+                <div class="form-checkbox">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the Terms & Conditions and Privacy Policy</label>
+                </div>
+    
+                <button type="submit" class="btn-primary">Complete Registration</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- History Section with Parallax -->
+    <section class="history parallax">
+        <div class="history-content">
+            <h2>Our Legacy of Excellence</h2>
+            <p>Since 1985, Cazper Sports Club has been at the forefront of sporting excellence. From humble beginnings, we've grown into one of the region's premier sporting institutions, nurturing talent and promoting wellness in our community.</p>
+            <br><a href="about.html" class="btn-primary">Discover Our Story</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@cazpersportsclub.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Sports Avenue<br>City, Country</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">Facilities</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Opening Hours</h4>
+                <p>Monday - Friday: 6:00 AM - 10:00 PM</p>
+                <p>Saturday - Sunday: 7:00 AM - 8:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cazper Sports Club. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html> 

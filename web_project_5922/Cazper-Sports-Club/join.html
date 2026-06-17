@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Now - Cazper Sports Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="page-loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="join-hero">
+        <nav>
+            <div class="logo">
+                <img src="logo.webp" alt="Cazper Sports Club Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="club.html">The Club</a></li>
+                <li><a href="coaching.html">Coaching</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="join.html" class="btn-primary active">Join Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Become a Member</h1>
+            <p>Start Your Fitness Journey Today</p>
+        </div>
+    </header>
+
+    <!-- Membership Plans Section -->
+    <section class="membership-plans">
+        <h2 class="section-title">Choose Your Membership</h2>
+        <div class="plans-grid">
+            <div class="plan-card" data-aos="fade-up">
+                <div class="plan-header">
+                    <h3>Standard</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">49</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> Access to Gym</li>
+                    <li><i class="fas fa-check"></i> Group Classes</li>
+                    <li><i class="fas fa-check"></i> Locker Access</li>
+                    <li><i class="fas fa-check"></i> Basic Amenities</li>
+                </ul>
+                <button class="btn-primary select-plan" data-plan="standard">Select Plan</button>
+            </div>
+
+            <div class="plan-card featured" data-aos="fade-up" data-aos-delay="100">
+                <div class="featured-tag">Most Popular</div>
+                <div class="plan-header">
+                    <h3>Premium</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">89</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> All Standard Features</li>
+                    <li><i class="fas fa-check"></i> Pool Access</li>
+                    <li><i class="fas fa-check"></i> Sports Ground Access</li>
+                    <li><i class="fas fa-check"></i> Bar & Lounge Access</li>
+                    <li><i class="fas fa-check"></i> Guest Passes (2/month)</li>
+                </ul>
+                <button class="btn-primary select-plan" data-plan="premium">Select Plan</button>
+            </div>
+
+            <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="plan-header">
+                    <h3>Elite</h3>
+                    <div class="plan-price">
+                        <span class="currency">$</span>
+                        <span class="amount">149</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> All Premium Features</li>
+                    <li><i class="fas fa-check"></i> Personal Training Sessions</li>
+                    <li><i class="fas fa-check"></i> Priority Booking</li>
+                    <li><i class="fas fa-check"></i> VIP Lounge Access</li>
+                    <li><i class="fas fa-check"></i> Unlimited Guest Passes</li>
+                </ul>
+                <button class="btn-primary select-plan" data-plan="elite">Select Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-form" id="registration">
+        <div class="form-container">
+            <h2>Complete Your Registration</h2>
+            <form id="joinForm" data-aos="fade-up">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name*</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name*</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth*</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectedPlan">Selected Plan*</label>
+                        <input type="text" id="selectedPlan" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="address">Address*</label>
+                    <textarea id="address" required></textarea>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="healthInfo">Health Information (Optional)</label>
+                    <textarea id="healthInfo" placeholder="Please mention any health conditions or injuries we should be aware of"></textarea>
+                </div>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the Terms & Conditions and Privacy Policy</label>
+                </div>
+
+                <button type="submit" class="btn-primary">Complete Registration</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2 class="section-title">Membership Benefits</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card" data-aos="fade-up">
+                <i class="fas fa-dumbbell"></i>
+                <h3>State-of-the-art Equipment</h3>
+                <p>Access to premium fitness equipment and facilities</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-users"></i>
+                <h3>Expert Guidance</h3>
+                <p>Professional trainers to help you achieve your goals</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Flexible Schedule</h3>
+                <p>Extended hours to fit your busy lifestyle</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">Facilities</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Opening Hours</h4>
+                <p>Monday - Friday: 6:00 AM - 10:00 PM</p>
+                <p>Saturday - Sunday: 7:00 AM - 8:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: membership@cazpersportsclub.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cazper Sports Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html> 
